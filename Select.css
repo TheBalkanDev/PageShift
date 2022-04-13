@@ -1,4 +1,4 @@
-round-select-blue {
+round-select {
   margin: 50px;
   width: 150px;
   border-radius: 16px;
@@ -12,6 +12,30 @@ round-select-blue {
 }
 
 /* CAUTION: IE hackery ahead */
+select::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    round-select {
+        background:none\9;
+        padding: 5px\9;
+    } 
+}
+
+select {
+margin: 50px;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 select::-ms-expand { 
     display: none; /* remove default arrow on ie10 and ie11 */
 }
